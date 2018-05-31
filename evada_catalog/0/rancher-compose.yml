@@ -1,0 +1,84 @@
+.catalog:
+  name: "INNODE"
+  version: '1.1'
+  services:
+  postgres:
+    scale: 1
+    start_on_create: true
+  description: |
+      postgres server.
+  redis:
+    scale: 1
+    start_on_create: false
+  description: |
+      redis server.
+  tomcat:
+    scale: 1
+    start_on_create: false
+  description: |
+      tomcat server.
+  questions:
+    - variable: "postgres_port"
+      type: "int"
+      label: "Postgres Port:"
+      description: "Which port should postgres listen on?"
+      default: 5432
+      required: true
+    - variable: "postgres_data"
+      description: "Work volume to save postgres data"
+      label: "Postgres Data:"
+      required: true
+      default: "/data/test/project_name/postgres-data"
+      type: "string"
+    - variable: "postgres_password"
+      type: "int"
+      label: "Postgres Password:"
+      description: "Password for postgres"
+      default: 888888
+      required: false
+    - variable: "redis_port"
+      type: "int"
+      label: "Redis Port:"
+      description: "Which port should reis listen on?"
+    - variable: "tomcat_port1"
+      type: "int"
+      label: "Tomcat Port1:"
+      description: "Which port1 should tomcat listen on?"
+      default: 8080
+      required: true
+    - variable: "tomcat_port2"
+      type: "int"
+      label: "Tomcat Port2:"
+      description: "Which port2 should tomcat listen on?"
+      default: 8000
+      required: true
+    - variable: "tomcat_webapps"
+      description: "Work volume to save tomcat_webapps"
+      label: "Tomcat Webapps:"
+      required: true
+      default: "/data/test/project_name/tomcat-webapps"
+      type: "string"
+    - variable: "tomcat_logs"
+      description: "Work volume to save tomcat_logs"
+      label: "Tomcat Logs:"
+      required: true
+      default: "/data/test/project_name/tomcat-logs"
+      type: "string"
+    - variable: "tomcat_applog"
+      description: "Work volume to save tomcat_applog"
+      label: "Tomcat Applog:"
+      required: true
+      default: "/data/test/project_name/tomcat-applog"
+      type: "string"
+    - variable: "tomcat_appconfig"
+      description: "Work volume to save tomcat_appconfig"
+      label: "Tomcat Appconfig:"
+      required: true
+      default: "/data/test/project_name/tomcat-appconfig"
+      type: "string"
+    - variable: "tomcat_upload"
+      description: "Work volume to save tomcat_upload"
+      label: "Tomcat Upload:"
+      required: true
+      default: "/data/test/project_name/tomcat-upload"
+      type: "string"

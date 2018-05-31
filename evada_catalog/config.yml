@@ -1,0 +1,8 @@
+name:  INNODE
+description: |
+   INNODE image
+version:  1.1
+category:  inno
+maintainer:  chenmaochuan
+license:  INNODE 1.1
+projectURL: http://112.124.34.33:10080/evada/rancher-compose.git

@@ -1,0 +1,30 @@
+###postgres######################################################
+postgres:
+  image: evada/postgres:v1.1
+  ports:
+    - ${postgres_port}:5432
+  environment:
+    POSTGRES_PASSWORD: ${postgres_password}
+  volumes:
+    - ${postgres_data}:/var/lib/postgresql/data
+
+###redis######################################################
+redis:
+  image: evada/redis:v1.1
+  ports:
+    - ${redis_port}:6379
+
+###tomcat######################################################
+tomcat:
+  image: evada/tomcat:v1.2
+  ports:
+    - ${tomcat_port1}:8080
+    - ${tomcat_port2}:8000
+  environment:
+    INNO_DE_CONFIG_PATH: /innode/app/config
+  volumes:
+    - ${tomcat_webapps}:/usr/local/tomcat/webapps
+    - ${tomcat_logs}:/usr/local/tomcat/logs
+    - ${tomcat_applog}:/innode/logs/applog
+    - ${tomcat_config}:/innode/app/config
+    - ${tomcat_upload}:/innode/docs/upload
