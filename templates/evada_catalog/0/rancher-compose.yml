@@ -40,6 +40,8 @@
       type: "int"
       label: "Redis Port:"
       description: "Which port should reis listen on?"
+      default: 6379
+      required: true
     - variable: "tomcat_port1"
       type: "int"
       label: "Tomcat Port1:"
