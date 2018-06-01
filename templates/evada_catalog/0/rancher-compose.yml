@@ -52,6 +52,8 @@
       type: "int"
       label: "Tomcat Port2:"
       description: "Which port2 should tomcat listen on?"
+      default: 8000
+      required: false
     - variable: "tomcat_webapps"
       description: "Work volume to save tomcat_webapps"
       label: "Tomcat Webapps:"
