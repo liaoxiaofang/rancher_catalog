@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: demo-deployment
+  name: redis-liao-deployment
 spec:
   replicas: 1
   template:
@@ -27,5 +27,5 @@ spec:
     app: redis-liao
   ports:
   - protocol: TCP
-    port: 6379
-targetPort: 6379
+    port: 16379
+targetPort: 16379
