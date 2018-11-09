@@ -8,7 +8,6 @@ spec:
     metadata:
       labels:
         app: redis
-        track: stable
     spec:
       containers:
       - name: redis
