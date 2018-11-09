@@ -7,14 +7,14 @@ spec:
   template:
     metadata:
       labels:
-        app: demo
+        app: redis
         track: stable
     spec:
       containers:
-      - name: demo
-        image: 192.168.3.207:5000/gsafety/demo:v3
+      - name: redis-liao
+        image: 192.168.3.207:5000/fft/redis:v1.2
         ports:
-        - containerPort: 8080
+        - containerPort: 6379
 
 ---
 apiVersion: v1
@@ -27,5 +27,5 @@ spec:
     app: demo
   ports:
   - protocol: TCP
-    port: 8080
-targetPort: 8080
+    port: 6379
+targetPort: 6379
