@@ -1,7 +1,9 @@
-FROM 192.168.3.207:5000/fft/java:8
+FROM 192.168.3.207:5000/fft/redis:v1.1
 
-MAINTAINER huangll99@126.com
-ADD target/demo-0.0.1-SNAPSHOT.jar /app.jar
+MAINTAINER 420671437@qq.com
+ADD liao.test /usr/local/etc/redis/
 
-EXPOSE 8080
-ENTRYPOINT ["java","-Xmx300m","-Dserver.port=8080","-jar","app.jar"]
+# Expose ports.
+EXPOSE 6379
+
+CMD [ "redis-server", "/usr/local/etc/redis/redis.conf" ]
