@@ -28,6 +28,8 @@ spec:
     app: redis
   type: NodePort
   ports:
-  - protocol: TCP
+  - name: tcp
+    nodePort: 10361
+    protocol: TCP
     port: 6379
     targetPort: 6379
