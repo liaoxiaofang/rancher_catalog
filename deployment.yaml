@@ -29,7 +29,7 @@ spec:
   type: NodePort
   ports:
   - name: tcp
-    nodePort: 10361
-    protocol: TCP
+    nodePort: 30003
     port: 6379
+    protocol: TCP
     targetPort: 6379
