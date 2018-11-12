@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: redisx
-        image: 192.168.3.207:5000/fft/redis:v1.2
+        image: 192.168.3.207:5000/fft/redis:v1.3
         ports:
         - containerPort: 6379
 
