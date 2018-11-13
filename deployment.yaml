@@ -1,6 +1,8 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
+  annotations:
+    field.cattle.io/creatorId: u-liao
   name: redis-liao-deployment
 spec:
   replicas: 1
