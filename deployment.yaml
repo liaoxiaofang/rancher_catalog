@@ -11,6 +11,8 @@ spec:
       app: redis
   template:
     metadata:
+      annotations:      
+        field.cattle.io/ports: '[[{"containerPort":6379,"dnsName":"redis-nodeport","kind":"NodePort","name":"6379tcp10361","protocol":"TCP","sourcePort":10361}]]'      
       labels:
         app: redis
     spec:
